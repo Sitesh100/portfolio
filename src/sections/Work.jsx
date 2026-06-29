@@ -41,7 +41,7 @@ const Work = () => {
         <div className='main-container pb-8 lg:pb-12 flex max-md:flex-col gap-6 justify-between items-start md:items-end'>
           <div className='max-w-xl'>
             <h3 className='mb-3'>Selected Work</h3>
-            <p className='text-lg lg:text-xl'>A showcase of my selected projects—designed to inspire, engage, and deliver real results.</p>
+            <p className='text-lg lg:text-xl'>A curated selection of real-world projects — from full-stack platforms and cloud deployments to responsive web applications delivered end to end.</p>
           </div>
           <GradientButton text="Explore All" link="/projects" className="btn-light" />
         </div>
