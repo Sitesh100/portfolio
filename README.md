@@ -49,10 +49,19 @@ All copy lives in data files — no need to touch components:
 | `src/components/skillsData.jsx` | Skill categories |
 | `index.html` | Meta tags and JSON-LD structured data |
 
+### Resume
+
+The PDF lives at `public/sitesh-kumar-resume.pdf`, so it's also reachable as a
+direct shareable link at `/sitesh-kumar-resume.pdf`.
+
+Every "View Resume" link — hero, contact CTA, nav menu, footer — opens that
+URL in a new tab, where the browser's own PDF viewer handles preview,
+download and print. To swap the file, replace it in `public/` and update
+`resume` in `siteData.jsx`.
+
 ### Before deploying
 
-1. Drop your CV at `public/resume.pdf` — the Resume buttons already point there.
-2. Set your real GitHub URL in `src/components/siteData.jsx` and in the
+1. Set your real GitHub URL in `src/components/siteData.jsx` and in the
    `sameAs` array in `index.html`.
 3. Replace `https://siteshkumar.com/` in `index.html` (canonical, `og:url`,
    `og:image`) with your live domain, and add `public/og-image.png` at

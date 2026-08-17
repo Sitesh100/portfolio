@@ -35,7 +35,11 @@ const Footer = () => {
           <ul className='flex flex-col gap-2 text-base lg:text-lg'>
             <li>Mon – Fri: 9:00 – 5:00</li>
             <li>24/7 WhatsApp &amp; Email</li>
-            <li><a href={site.resume} download className='hover:opacity-70 transition-opacity underline underline-offset-4'>Download Resume</a></li>
+            <li>
+              <a href={site.resume} target="_blank" rel="noreferrer noopener" className='hover:opacity-70 transition-opacity underline underline-offset-4'>
+                View Resume
+              </a>
+            </li>
           </ul>
         </div>
 

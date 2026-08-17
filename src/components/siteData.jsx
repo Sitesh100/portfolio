@@ -14,8 +14,9 @@ const site = {
   github: "https://github.com/siteshkumar",
   linkedin: "https://www.linkedin.com/in/sitesh-kumar-25814a236/",
   instagram: "https://www.instagram.com/sleepless_friend/",
-  // Drop your PDF at `public/resume.pdf` and this link goes live.
-  resume: "/resume.pdf",
+  // Served straight from `public/`, so it also works as a shareable direct link.
+  resume: "/sitesh-kumar-resume.pdf",
+  resumeFileName: "Sitesh-Kumar-Resume.pdf",
   availability: "Open to full-time roles, freelance projects and collaborations",
 };
 

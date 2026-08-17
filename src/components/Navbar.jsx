@@ -86,7 +86,7 @@ const Navbar = () => {
           <Link key={label} to={to} className='menu-link'>{label}</Link>
         ))}
         <a href={`mailto:${site.email}`} className='menu-link'>Contact</a>
-        <a href={site.resume} download className='menu-link'>Resume</a>
+        <a href={site.resume} target="_blank" rel="noreferrer noopener" className='menu-link'>Resume</a>
       </div>
     </>
   )

@@ -65,7 +65,7 @@ const Cursor = () => {
   });
 
   return (
-    <div className="max-lg:hidden fixed inset-0 z-[60] pointer-events-none mix-blend-difference" aria-hidden="true">
+    <div className="max-lg:hidden fixed inset-0 z-[80] pointer-events-none mix-blend-difference" aria-hidden="true">
       <div ref={dotRef} className="absolute top-0 left-0 w-2 h-2 rounded-full bg-white" />
       <div ref={ringRef} className="absolute top-0 left-0 w-9 h-9 rounded-full border-2 border-white" />
     </div>

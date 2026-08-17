@@ -138,7 +138,7 @@ const Hero = () => {
 
         <div className="flex flex-wrap gap-4">
           <GradientButton text="Let's Talk" link={`mailto:${site.email}`} className="hero-cta magnetic" />
-          <GradientButton text="Resume" link={site.resume} className="hero-cta magnetic" download />
+          <GradientButton text="View Resume" link={site.resume} className="hero-cta magnetic" external />
         </div>
 
         {/* Quick-scan facts — the first thing a recruiter looks for */}

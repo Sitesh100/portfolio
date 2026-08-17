@@ -48,7 +48,7 @@ const CTA = () => {
 
         <div className="cta-action flex flex-wrap gap-4 justify-center">
           <GradientButton text="Book a Call" link={`mailto:${site.email}`} className="magnetic" />
-          <GradientButton text="Resume" link={site.resume} className="magnetic" download />
+          <GradientButton text="View Resume" link={site.resume} className="magnetic" external />
         </div>
 
         <address className="cta-action not-italic text-center text-base lg:text-xl text-gray-400 flex flex-wrap justify-center gap-x-6 gap-y-2">
