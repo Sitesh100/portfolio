@@ -132,7 +132,7 @@ const Hero = () => {
 
         <p className="hero-sub max-w-2xl text-base lg:text-xl text-gray-300 leading-relaxed mb-7">
           I build responsive, performance-optimised web applications with
-          React.js, Next.js and Node.js — and ship them to production on AWS and
+          React.js, Next.js and Node.js and ship them to production on AWS and
           GCP with Docker, Kubernetes and CI/CD pipelines.
         </p>
 

@@ -6,7 +6,7 @@ const site = {
   name: "Sitesh Kumar",
   role: "Full-Stack Developer & DevOps Engineer",
   headline:
-    "Full-Stack Developer & DevOps Engineer — React.js, Next.js, Node.js, Docker, Kubernetes, AWS & GCP",
+    "Full-Stack Developer & DevOps Engineer React.js, Next.js, Node.js, Docker, Kubernetes, AWS & GCP",
   location: "Delhi, India",
   email: "siteshkjha9@gmail.com",
   phone: "+91 8287147677",

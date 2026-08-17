@@ -11,7 +11,7 @@ const Footer = () => {
       {/* Footer Top */}
       <footer className="main-container grid md:grid-cols-2 lg:grid-cols-4 gap-10 py-20">
         <div>
-          <Link to='/' aria-label={`${site.name} — home`}>
+          <Link to='/' aria-label={`${site.name} home`}>
             <div className='text-5xl font-heading-alt'>SK</div>
           </Link>
           <p className='text-base lg:text-lg mt-4 text-gray-400 max-w-xs'>

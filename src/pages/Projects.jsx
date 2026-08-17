@@ -44,7 +44,7 @@ const Projects = () => {
                 >
                   <img
                     src={image}
-                    alt={`${name} — ${role} project screenshot`}
+                    alt={`${name} ${role} project screenshot`}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />

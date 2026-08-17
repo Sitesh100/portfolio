@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className='main-container py-6 flex justify-between items-center'>
 
           {/* Logo */}
-          <Link to='/' aria-label={`${site.name} — home`}>
+          <Link to='/' aria-label={`${site.name} home`}>
             <div className='text-5xl font-heading-alt'>SK</div>
           </Link>
 

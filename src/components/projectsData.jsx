@@ -26,7 +26,7 @@ const projects = [
     name: "Asan Devnest",
     image: asan,
     link: "https://asandevnest.com/",
-    role: "Product Lead — Frontend & Backend Architecture",
+    role: "Product Lead Frontend & Backend Architecture",
     summary:
       "Developer platform where I led the frontend team and architected the backend: REST APIs for authentication, admin operations, problem sets and analytics, plus a refactored Mongoose schema design with validations for stronger data integrity.",
     stack: ["React", "Node.js", "Express", "MongoDB", "Mongoose", "REST APIs"],

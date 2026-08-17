@@ -77,12 +77,12 @@ const About = () => {
         <p className='about-text font-heading text-2xl md:text-3xl xl:text-[40px] 2xl:text-5xl leading-[1.25]'>
           Full-Stack Developer and DevOps Engineer building responsive,
           performance-optimised web applications with React.js, Next.js,
-          TypeScript and Node.js — and deploying them on AWS and GCP with Docker,
+          TypeScript and Node.js and deploying them on AWS and GCP with Docker,
           Kubernetes, Terraform and CI/CD pipelines. I&apos;ve led a frontend team,
           architected a production backend on Node, Express and MongoDB, cut a
           Docker image by over 90%, and integrated payment gateways and REST APIs
-          end to end. Alongside that I work in SEO, AEO and GEO — structured data,
-          Core Web Vitals and keyword strategy — so the products I ship get found
+          end to end. Alongside that I work in SEO, AEO and GEO structured data,
+          Core Web Vitals and keyword strategy so the products I ship get found
           as well as they perform.
         </p>
 

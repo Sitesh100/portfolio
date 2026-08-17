@@ -3,7 +3,7 @@ import Hero from '../sections/Hero'
 import About from '../sections/About'
 import Services from '../sections/Services'
 import Skills from '../sections/Skills'
-import Experience from '../sections/Experience'
+// import Experience from '../sections/Experience'
 import Work from '../sections/Work'
 import Marquee from '../sections/Marquee'
 import Availability from '../sections/Availability'
@@ -16,7 +16,7 @@ const Home = () => {
       <About />
       <Services />
       <Skills />
-      <Experience />
+      {/* <Experience /> */}
       <Work />
       <Marquee />
       <Availability />

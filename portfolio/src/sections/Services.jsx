@@ -77,8 +77,8 @@ const Services = () => {
               <p className="text-lg lg:text-xl leading-relaxed">
                 Bringing ideas to life with smooth, immersive animations that engage users
                 and elevate brand storytelling. Using tools like GSAP and Framer Motion, I
-                design interactive experiences that feel dynamic yet natural — from subtle
-                micro-interactions to full-page transitions — ensuring your website not
+                design interactive experiences that feel dynamic yet natural from subtle
+                micro-interactions to full-page transitions ensuring your website not
                 only looks stunning but feels alive.
               </p>
             </div>

@@ -92,7 +92,7 @@ const Experience = () => {
           </h2>
         </div>
         <p className="text-lg lg:text-xl max-w-sm">
-          Frontend, backend and DevOps roles across product teams — building
+          Frontend, backend and DevOps roles across product teams building
           interfaces, architecting APIs and getting them into production.
         </p>
       </div>
