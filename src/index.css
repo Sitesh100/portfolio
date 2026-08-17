@@ -38,7 +38,7 @@
     @apply w-full max-w-[1600px] m-auto px-4 lg:px-12;
   }
 
-  h1 {
+  .gradient-underline {
     position: relative;
     &::before {
       content: '';
@@ -126,10 +126,47 @@
 
 }
 
+/* Anchor targets clear the fixed navbar. */
+:where([id]) {
+  scroll-margin-top: 6rem;
+}
+
+/* The custom cursor replaces the native one, but only once it's actually
+   mounted — so a touch device or a reduced-motion user keeps its pointer. */
+html.has-custom-cursor,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor .menubar {
+  cursor: none;
+}
+
+/* Let the marquee rest when someone is reading it. */
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
 @media (max-width: 1023px) {
 
-  h1::before {
+  .gradient-underline::before {
     bottom: 4px;
   }
-  
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .marquee-star1,
+  .marquee-star2 {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+
 }

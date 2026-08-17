@@ -1,8 +1,62 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+const services = [
+  {
+    id: "01",
+    title: <>Web Design <br /> &amp; UI/UX</>,
+    body: "Modern, user-focused interfaces with clean layouts, considered typography and smooth interactions. Responsive from mobile to ultrawide, built as reusable component systems in React and Tailwind CSS, and tested for accessibility.",
+    theme: "bg-black text-white",
+    position: "sticky top-4 pt-16 lg:pt-20 pb-[40rem]",
+    // The tall bottom padding on each sticky panel is what lets the next one
+    // slide up and cover it. The final panel is static so the stack resolves.
+  },
+  {
+    id: "02",
+    title: <>Web Development <br /> &amp; DevOps</>,
+    body: "Scalable frontends in React and Next.js backed by Node.js and Express APIs, MongoDB or MySQL, and authentication and payment integrations. Shipped through Docker, Kubernetes and CI/CD pipelines on AWS and GCP — optimised images, fast builds, reliable uptime.",
+    theme: "bg-[#E9E9F0] text-black",
+    position: "sticky top-1/4 pt-16 lg:pt-20 pb-[30rem]",
+  },
+  {
+    id: "03",
+    title: <>Animated <br /> Websites</>,
+    body: "Scroll-driven storytelling with GSAP and Framer Motion — ScrollTrigger sequences, SVG drawing, text splitting and micro-interactions. Motion that stays performant, respects reduced-motion preferences and never gets in the way of the content.",
+    theme: "bg-white text-black",
+    position: "sticky top-1/2 pt-16 lg:pt-20 pb-[20rem]",
+  },
+  {
+    id: "04",
+    title: <>SEO, AEO <br /> &amp; GEO</>,
+    body: "Technical SEO plus Answer and Generative Engine Optimization: schema.org structured data, semantic markup, Core Web Vitals, metadata and keyword strategy — so the work ranks in search and gets cited by AI answer engines.",
+    theme: "bg-black text-white",
+    position: "relative py-16 lg:py-24",
+  },
+];
 
 const Services = () => {
+
+  const servicesRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.utils.toArray(".service-panel").forEach((panel) => {
+      gsap.from(panel.querySelectorAll(".service-reveal"), {
+        y: 60,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: "power3.out",
+        scrollTrigger: { trigger: panel, start: "top 80%" },
+      });
+    });
+  }, { scope: servicesRef });
+
   return (
-    <>
+    <section ref={servicesRef} id="services" aria-label="Services">
       {/* Title Wrapper */}
       <div className="bg-white text-black">
         <div className='main-container pb-8 lg:pb-12'>
@@ -12,82 +66,28 @@ const Services = () => {
 
       {/* Services List */}
       <div className='relative'>
-        <div className="bg-black text-white pt-16 lg:pt-20 pb-[40rem] sticky top-4">
-          <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
-              
-            {/* Left side */}
-            <div className='flex gap-6 lg:gap-8'>
-              <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">01</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
-                  Web Design <br /> & UI/UX
-              </h2>
-            </div>
+        {services.map(({ id, title, body, theme, position }) => (
+          <div key={id} className={`service-panel ${theme} ${position}`}>
+            <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
 
-            {/* Right side */}
-            <div className="flex items-center">
-              <p className="text-lg lg:text-xl leading-relaxed">
-                  Crafting modern, user-focused websites with clean layouts,
-                  thoughtful typography, and smooth interactions. Every design
-                  is tailored to deliver both aesthetic appeal and seamless
-                  usability.
-              </p>
-            </div>
+              {/* Left side */}
+              <div className='flex gap-6 lg:gap-8'>
+                <span className="service-reveal text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">{id}</span>
+                <h2 className="service-reveal text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
+                  {title}
+                </h2>
+              </div>
 
+              {/* Right side */}
+              <div className="flex items-center">
+                <p className="service-reveal text-lg lg:text-xl leading-relaxed">{body}</p>
+              </div>
+
+            </div>
           </div>
-        </div>
-       <div className="bg-[#E9E9F0] text-black pt-16 lg:pt-20 pb-[23rem] sticky top-1/3">
-  <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
-      
-    {/* Left side */}
-    <div className='flex gap-6 lg:gap-8'>
-      <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">02</span>
-      <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
-        Web Development <br /> & DevOps
-      </h2>
-    </div>
-
-    {/* Right side */}
-    <div className="flex items-center">
-      <p className="text-lg lg:text-xl leading-relaxed">
-        Crafting modern, high-performance web experiences using the latest
-        technologies and frameworks. I build scalable front-end interfaces and
-        robust back-end systems integrated with CI/CD pipelines, ensuring smooth
-        deployments, optimized performance, and reliable uptime. From responsive
-        design to automated workflows, I bridge the gap between development and
-        operations for seamless delivery.
-      </p>
-    </div>
-
-  </div>
-        </div>
-
-        <div className="bg-white text-black py-16 lg:py-20 sticky top-2/3">
-          <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
-              
-            {/* Left side */}
-            <div className='flex gap-6 lg:gap-8'>
-              <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">03</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
-                Animated <br /> Website
-              </h2>
-            </div>
-
-            {/* Right side */}
-            <div className="flex items-center">
-              <p className="text-lg lg:text-xl leading-relaxed">
-                Bringing ideas to life with smooth, immersive animations that engage users
-                and elevate brand storytelling. Using tools like GSAP and Framer Motion, I
-                design interactive experiences that feel dynamic yet natural — from subtle
-                micro-interactions to full-page transitions — ensuring your website not
-                only looks stunning but feels alive.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
+        ))}
       </div>
-    </>
+    </section>
   )
 }
 
